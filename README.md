@@ -17,11 +17,11 @@ A Python solution for the Robot problem - simulates robots navigating a grid on 
 2. Run the script using one of these methods:
 
    **PowerShell:**
-   Get-Content input.txt | python martian_robots.py
+   Get-Content input.txt | python Robots.py
    
 
    **Command Prompt:**
-   python martian_robots.py < input.txt
+   python Robots.py < input.txt
 
 ## Tech Choices
 
@@ -31,14 +31,10 @@ Making use of Dictionaries:
 **Why**: Using dictionaries (`turn_left` and `turn_right`) provides minimal lookup time and makes the logic explicit and easy to verify. More maintainable than complex if-else statements.
 
 ### Set for Scent Tracking
-
-- **Why**: A `set` data structure provides O(1) average-case lookup and insertion, which is perfect for checking if a position has a scent marker. More efficient than a list for this use case.
-
-### Standard Input Processing
-- **Why**: Reading from stdin makes the script flexible - it can work with files via redirection, piped input, or interactive input. This follows Unix philosophy and makes testing easier.
+**Why**: A `set` data structure provides O(1) average-case lookup and insertion, which is perfect for checking if a position has a scent marker. More efficient than a list for this use case.
 
 ### Procedural Approach
-- **Why**: For this problem, a simple procedural approach with functions is sufficient. No need for classes or complex OOP - the problem domain is straightforward enough that functions provide clear, readable code.
+**Why**: For this problem, a simple procedural approach with functions is sufficient. No need for classes or complex OOP due to the problem being straightforward enough that functions provide clear, readable code.
 
 ## Problem Approach
 
@@ -61,5 +57,4 @@ Making use of Dictionaries:
 
 5. **Output**: After processing all instructions, output the final position and orientation, appending "LOST" if applicable.
 
-This approach handles the problem incrementally, processing one robot at a time while maintaining state about lost positions, which prevents future robots from making the same fatal mistake.
 
